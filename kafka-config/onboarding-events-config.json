@@ -1,0 +1,5 @@
+{
+  "topic": "onboarding-events",
+  "partitions": 3,
+  "replicationFactor": 1
+}

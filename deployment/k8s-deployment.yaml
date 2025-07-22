@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-onboarding-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: client-onboarding
+  template:
+    metadata:
+      labels:
+        app: client-onboarding
+    spec:
+      containers:
+      - name: onboarding-container
+        image: your-dockerhub-username/client-onboarding:latest
+        ports:
+        - containerPort: 8080
